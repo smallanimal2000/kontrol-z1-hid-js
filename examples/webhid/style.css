@@ -1,0 +1,42 @@
+:root {
+  --bg: #0d1117;
+  --panel: #161b22;
+  --line: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #118ab5;
+  --hot: #f78166;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 14px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+}
+header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+h1 { font-size: 18px; margin: 0; }
+.tag { color: var(--muted); font-size: 12px; border: 1px solid var(--line); padding: 2px 6px; border-radius: 6px; }
+.actions { display: flex; align-items: center; gap: 12px; }
+button {
+  background: var(--accent); color: #fff; border: 0; padding: 8px 14px;
+  border-radius: 6px; cursor: pointer; font: inherit;
+}
+button:disabled { opacity: 0.4; cursor: default; }
+.chk { color: var(--muted); display: flex; align-items: center; gap: 6px; }
+.status { color: var(--muted); }
+main { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 16px; }
+.deck { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+.deck h2 { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 10px; }
+.center { }
+.controls { display: flex; flex-direction: column; gap: 8px; }
+.ctl { display: grid; grid-template-columns: 70px 1fr 48px; align-items: center; gap: 8px; }
+.ctl .name { color: var(--muted); }
+.bar { height: 10px; background: #0b0f14; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; }
+.bar > i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--hot)); }
+.ctl .val { text-align: right; color: var(--text); }
+.buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; color: var(--muted); }
+.btn.on { background: var(--hot); color: #000; border-color: var(--hot); }
+.log { margin-top: 16px; color: var(--muted); white-space: pre-wrap; max-height: 160px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; }

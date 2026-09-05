@@ -1,0 +1,48 @@
+{
+  "name": "kontrol-z1-hid",
+  "version": "0.1.0",
+  "description": "Traktor Kontrol Z1 control-surface driver (HID): parse knobs/faders/buttons, drive LEDs. WebHID + node-hid.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["traktor", "kontrol", "z1", "webhid", "node-hid", "midi-controller", "dj"],
+  "files": ["dist", "src", "README.md"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./protocol": {
+      "types": "./dist/protocol.d.ts",
+      "import": "./dist/protocol.js"
+    },
+    "./webhid": {
+      "types": "./dist/webhid.d.ts",
+      "import": "./dist/webhid.js"
+    },
+    "./node": {
+      "types": "./dist/node.d.ts",
+      "import": "./dist/node.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/w3c-web-hid": "^1.0.6",
+    "oxlint": "^1.81.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "optionalDependencies": {
+    "node-hid": "^3.1.2"
+  }
+}

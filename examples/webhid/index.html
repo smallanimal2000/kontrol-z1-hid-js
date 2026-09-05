@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Z1 Driver — WebHID</title>
+    <link rel="icon" href="/icon-192.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Traktor Kontrol Z1 <span class="tag">WebHID</span></h1>
+      <div class="actions">
+        <button id="connect">Connect</button>
+        <button id="ledsweep" disabled>LED sweep</button>
+        <label class="chk"><input type="checkbox" id="mirror" disabled /> mirror gains → VU</label>
+      </div>
+    </header>
+
+    <p id="status" class="status">Not connected. Click <b>Connect</b> and pick the Z1.</p>
+
+    <main id="panel" hidden>
+      <section class="deck"><h2>Left</h2><div id="left" class="controls"></div></section>
+      <section class="deck center">
+        <h2>Center</h2><div id="center" class="controls"></div>
+        <h2>Buttons</h2><div id="buttons" class="buttons"></div>
+      </section>
+      <section class="deck"><h2>Right</h2><div id="right" class="controls"></div></section>
+    </main>
+
+    <pre id="log" class="log"></pre>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
